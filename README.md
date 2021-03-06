@@ -1,1 +1,0 @@
-https://UsmanLatpwd.github.io/rsschool-cv/cv
