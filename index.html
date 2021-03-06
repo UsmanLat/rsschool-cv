@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Usman Latipov CV</title>
+    <style>
+      :root {
+        box-sizing: border-box;
+      }
+
+      *,
+      ::before,
+      ::after {
+        box-sizing: inherit;
+      }
+
+      body {
+        background-color: #eee;
+        font-family: Helvetica, Arial, sans-serif;
+      }
+
+      body * + * {
+        margin-top: 1.5em;
+      }
+
+      header,
+      footer {
+        align-items: center;
+        padding: 1em 1.5em;
+        color: #fff;
+        background-color: #0072b0;
+        border-radius: 0.5em;
+      }
+
+      .container {
+        width: 1080px;
+        margin: 0 auto;
+        text-align: center;
+      }
+
+      main {
+        background-color: powderblue;
+        border-radius: 0.5em;
+      }
+
+      .highlight {
+        background-color: lightgray;
+      }
+
+      p {
+        text-align: justify;
+      }
+
+      li {
+        text-align: left;
+      }
+      li + li {
+        margin-top: 0;
+      }
+
+      .highlight {
+        text-align: left;
+      }
+      .level {
+        text-align: center;
+      }
+      a {
+        color: white;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <header>
+        <h1>Usman Latipov</h1>
+        <figure>
+          <img src="myavatar.jpg" alt="my avatar" width="200" />
+          <figcaption>avatar</figcaption>
+        </figure>
+        <h2 id="contacts">Contacts</h2>
+        <ul>
+          <li><strong>Phone:</strong> +​998972786875</li>
+          <li><strong>Email:</strong> LatipovUf@gmal.com</li>
+        </ul>
+      </header>
+
+      <main>
+        <section>
+          <h2 id="About-me">About me</h2>
+          <h3>Purpose and priorities</h3>
+          <p>
+            Software engineer, with adequate professional experience. Worked
+            with a variety of technologies or programming languages. An early
+            adopter of new frameworks and libraries. I follow best practices and
+            methodologies and constantly use programming patterns to build
+            effective systems and applications. Have good analytic abilities and
+            work with legacy code.
+          </p>
+
+          <h3 id="key-skills">KEY SKILLS</h3>
+
+          <p><strong>Front End</strong></p>
+          <ul>
+            <li>HTML5, CSS3</li>
+            <li>Javascript</li>
+            <li>ReactJS</li>
+            <li>Babel</li>
+          </ul>
+
+          <p><strong>Back End</strong></p>
+          <ul>
+            <li>MySQL</li>
+            <li>NodeJS</li>
+            <li>PHP</li>
+          </ul>
+
+          <p><strong>DevOps</strong></p>
+          <ul>
+            <li>Github</li>
+          </ul>
+
+          <h3 id="work-history">WORK HISTORY</h3>
+          <p>
+            <strong>Software Engineer</strong><br />
+            01/2017 – Present <br />
+            UHT Software Development Tashkent, UZ
+          </p>
+          <ul>
+            <li>Developed new features for ASP.NET based Applications</li>
+            <li>Web application maintenance and bug fixing</li>
+          </ul>
+
+          <p>
+            <strong>Junior Frontend Developer</strong> <br />
+            07/2015 – 12/2017 SIS Development Tashkent, UZ
+          </p>
+          <ul>
+            <li>Supported existing and developed new internal services</li>
+            <li>Developed a cross-browser adaptive layout</li>
+            <li>
+              Participated in the development of the frontend part of the
+              applications.
+            </li>
+          </ul>
+        </section>
+
+        <section>
+          <h2>Sample code</h2>
+
+          <pre class="highlight">
+              <code>
+                (function (window) {
+                  const FORM_SELECTOR = '[data-coffee-order="form"]';
+                  const CHECKLIST_SELECTOR = '[data-coffee-order="checklist"]';
+                  let App = window.App;
+                  let Truck = App.Truck;
+                  let DataStore = App.DataStore;
+                  let FormHandler = App.FormHandler;
+                  let Validation = App.Validation;
+                  let CheckList = App.CheckList;
+                
+                  let myTruck = new Truck('ncc-1701', new DataStore());
+                  let formHandler = new FormHandler(FORM_SELECTOR);
+                  let checklist = new CheckList(CHECKLIST_SELECTOR);
+                  window.myTruck = myTruck;
+                  
+                  formHandler.addSubmitHandler(data => {
+                    myTruck.createOrder.call(myTruck, data);
+                    checklist.addRow.call(checklist, data);
+                  });
+                
+                  formHandler.addInputHandler(Validation.isCompanyEmail);
+                
+                  checklist.addClickHandler(myTruck.deliveryOrder.bind(myTruck));
+                
+                  console.log(formHandler);
+                  
+                })(window);
+
+              </code>
+            </pre>
+        </section>
+
+        <section>
+          <h3 id="education">Education</h3>
+
+          <p>
+            <strong>Bachelor degree.</strong> Applied Mathematics and Computer
+            Science, 2011-2015. Uzbekistan National University, Tashkent.
+          </p>
+
+          <h3>LEVEL OF ENGLISH PROFICIENCY</h3>
+
+          <p class="level"><strong>CEFR: A2</strong></p>
+        </section>
+      </main>
+
+      <footer>
+        <p>
+          2021,
+          <a href="https://github.com/UsmanLat">GitHub profile</a>
+        </p>
+        <p>
+          <a href="https://rs.school/js/"
+            ><img src="rs_school_js.svg" alt="rs_school_js logo" width="100" />
+            RS School JavaScript/Front-end Course</a
+          >
+        </p>
+      </footer>
+    </div>
+  </body>
+</html>
